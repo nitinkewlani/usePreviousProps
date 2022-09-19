@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PreviousData from './PreviousData';
 import Input from './Input';
-import { LIMIT } from './constants';
 import './style.css';
 
 export default function App() {
@@ -20,7 +19,12 @@ export default function App() {
 
   return (
     <div>
-      <u>New Entry:</u>
+      <b>
+        <u>NOTE</u>: Initially when you add first value ref is an empty array.
+      </b>
+      <br />
+      <br />
+      <u>New Entry</u>:
       <br />
       <br />
       <Input

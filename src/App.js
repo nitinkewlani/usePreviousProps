@@ -20,8 +20,12 @@ export default function App() {
   return (
     <div>
       <b>
-        <u>NOTE</u>: Initially when you add first value ref is an empty array.
+        <u>NOTE</u>:{' '}
       </b>
+      <i>
+        Initially when you add first value ref is an empty array so it displays
+        empty list.
+      </i>
       <br />
       <br />
       <u>New Entry</u>:

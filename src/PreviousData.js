@@ -17,16 +17,14 @@ const PreviousData = React.memo(
 
     return (
       <>
-        {previousValues.length > 0 && (
-          <>
-            <br />
-            <hr />
-            <u>History List (Limit:{LIMIT})</u>
-            <br />
-            <br />
-            <div>{previousValues.join(', ')}</div>
-          </>
-        )}
+        <br />
+        <hr />
+        <u>
+          History List ({previousValues.length}/{LIMIT})
+        </u>
+        <br />
+        <br />
+        <div>{previousValues.join(', ')}</div>
       </>
     );
   }

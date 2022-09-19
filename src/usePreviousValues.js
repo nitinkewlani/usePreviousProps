@@ -12,7 +12,10 @@ const usePreviousValues = (value = '', LIMIT = 1) => {
       previousRef.current.push(value);
     }
   }, [value]);
+
   return { previousValues: previousRef.current, isLimitReached };
 };
 
 export default usePreviousValues;
+
+// Once the DOM is rendered after that only the callback within useEffect runs

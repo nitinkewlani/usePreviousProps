@@ -17,5 +17,3 @@ const usePreviousValues = (value = '', LIMIT = 1) => {
 };
 
 export default usePreviousValues;
-
-// Once the DOM is rendered after that only the callback within useEffect runs

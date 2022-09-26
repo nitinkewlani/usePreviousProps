@@ -8,7 +8,8 @@ export default function App() {
   const [addValue, addToList] = useState('');
   const [limitReached, setIsLimitReached] = useState(false);
 
-  const handleAddValue = () => {
+  const handleAddValue = (e) => {
+    e.preventDefault();
     addToList(value);
     setValue('');
   };
@@ -18,19 +19,21 @@ export default function App() {
   };
 
   return (
-    <div>
-      <b>
-        <u>NOTE</u>:{' '}
-      </b>
-      <i>
-        Initially when you add first value ref is an empty array so it displays
-        empty list.
-      </i>
-      <br />
-      <br />
-      <u>New Entry</u>:
-      <br />
-      <br />
+    <form>
+      <>
+        <b>
+          <u>NOTE</u>:{' '}
+        </b>
+        <i>
+          Initially when you add first value ref is an empty array so it
+          displays empty list.
+        </i>
+        <br />
+        <br />
+        <u>New Entry</u>:
+        <br />
+        <br />
+      </>
       <Input
         type="text"
         value={value}
@@ -39,7 +42,7 @@ export default function App() {
         onChange={handleChange}
       />
       <Input
-        type="button"
+        type="submit"
         value={limitReached ? 'Limit Reached' : 'Add Value'}
         onClick={handleAddValue}
         disabled={!value || limitReached}
@@ -48,6 +51,6 @@ export default function App() {
       <br />
       {addValue && `Recent Entry: ${addValue}`}
       <PreviousData value={addValue} setIsLimitReached={setIsLimitReached} />
-    </div>
+    </form>
   );
 }
